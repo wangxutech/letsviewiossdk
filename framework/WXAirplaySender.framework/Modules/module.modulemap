@@ -1,0 +1,6 @@
+framework module WXAirplaySender {
+  umbrella header "WXAirplaySender-umbrella.h"
+
+  export *
+  module * { export * }
+}

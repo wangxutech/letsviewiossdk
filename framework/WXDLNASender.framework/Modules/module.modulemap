@@ -1,0 +1,6 @@
+framework module WXDLNASender {
+  umbrella header "WXDLNASender-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module WXCastiOSSender {
+  umbrella header "WXCastiOSSender-umbrella.h"
+
+  export *
+  module * { export * }
+}

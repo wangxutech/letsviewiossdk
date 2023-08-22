@@ -1,0 +1,6 @@
+framework module WXCastFFMpeg {
+  umbrella header "WXCastFFMpeg-umbrella.h"
+
+  export *
+  module * { export * }
+}
