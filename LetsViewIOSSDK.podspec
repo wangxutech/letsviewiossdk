@@ -23,10 +23,10 @@ Pod::Spec.new do |s|
 
   s.author      = { "wangxutech" => "moblie@wangxutech.com" }
 
-  s.source       = { :http => "https://aw.aoscdn.com/base/support/v2/resources/510e6cf7-b7a5-47b0-b347-7e5c92d42634/download", :type => 'zip' }
+  s.source       = { :git => "https://github.com/wangxutech/letsviewiossdk.git", :tag => s.version.to_s }
   
   s.platform = :ios
-  s.ios.deployment_target = "11.0"
+  s.ios.deployment_target = "12.0"
   s.requires_arc = true
   
   s.default_subspec = "Core"
