@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
   
   s.subspec "Core" do |ss|
     ss.vendored_frameworks = [
-    'WXMirrorCore.framework',
+        'framework/WXMirrorCore.framework',
     ]
     ss.ios.pod_target_xcconfig = {
       'VALID_ARCHS[sdk=iphonesimulator*]' => ''
@@ -42,7 +42,7 @@ Pod::Spec.new do |s|
   
   s.subspec "DLNA" do |ss|
     ss.vendored_frameworks = [
-        'WXDLNASender.framework',
+        'framework/WXDLNASender.framework',
     ]
     ss.dependency 'LetsViewIOSSDK/Core'
     ss.libraries = 'xml2'
@@ -53,7 +53,7 @@ Pod::Spec.new do |s|
   
   s.subspec "Airplay" do |ss|
     ss.vendored_frameworks = [
-        'WXAirplaySender.framework',
+        'framework/WXAirplaySender.framework',
     ]
     ss.dependency 'LetsViewIOSSDK/Core'
     ss.ios.pod_target_xcconfig = {
@@ -63,7 +63,7 @@ Pod::Spec.new do |s|
   
   s.subspec "Sender" do |ss|
     ss.vendored_frameworks = [
-        'WXCastiOSSender.framework',
+        'framework/WXCastiOSSender.framework',
     ]
     ss.dependency 'MMWormhole'
     ss.dependency 'LetsViewIOSSDK/Core'
@@ -74,8 +74,8 @@ Pod::Spec.new do |s|
   
   s.subspec "Receiver" do |ss|
     ss.vendored_frameworks = [
-        'WXCastiOSReceiver.framework',
-        'WXCastFFMpeg.framework',
+        'framework/WXCastiOSReceiver.framework',
+        'framework/WXCastFFMpeg.framework',
     ]
     ss.dependency 'LetsViewIOSSDK/Core'
     ss.ios.pod_target_xcconfig = {
