@@ -10,9 +10,3 @@
 #import <WXDLNASender/WXDLNASenderObjects.h>
 #import <WXDLNASender/WXDLNASenderServer.h>
 #import <WXDLNASender/WXDLNASenderRenderer.h>
-
-//! Project version number for WXDLNASender.
-FOUNDATION_EXPORT double WXDLNASenderVersionNumber;
-
-//! Project version string for WXDLNASender.
-FOUNDATION_EXPORT const unsigned char WXDLNASenderVersionString[];

@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (BOOL)isWifiConnect;
 
++ (BOOL)isBridgeConnect;
+
 + (NSString *)getIPAddress:(BOOL)preferIPv4;
 
 /// 获取设备当前 IP 地址
@@ -25,7 +27,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSData *)deviceHostData;
 
+/// 检查在同一个主机
 + (BOOL)checkSameNat:(NSString *)targetHost nativeHost:(NSString *)nativeHost;
+
+/// 检查在同一个子网
++ (BOOL)checkSubnet:(NSString *)targetHost nativeHost:(nonnull NSString *)nativeHost;
 
 #pragma mark -
 

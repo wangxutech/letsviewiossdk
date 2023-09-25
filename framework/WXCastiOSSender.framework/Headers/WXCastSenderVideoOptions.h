@@ -16,6 +16,7 @@ typedef NS_ENUM(int, WXCastSenderVideoFps) {
 };
 
 typedef NS_ENUM(int, WXCastSenderVideoResolution) {
+    WXCastSenderVideoResolution480 = 480,
     WXCastSenderVideoResolution540 = 540,
     WXCastSenderVideoResolution720 = 720, // 默认
     WXCastSenderVideoResolution1080 = 1080,
@@ -33,7 +34,7 @@ typedef NS_ENUM(int, WXCastSenderVideoQuality) {
     WXCastSenderVideoQualityNone = -1,              // 不使用精细配置，内部根据接收端参数配置
     WXCastSenderVideoQualityStandard = 0,           // 标清
     WXCastSenderVideoQualityHD = 1,                 // 高清
-    WXCastSenderVideoQualityOrigin = 2              // 原画
+    WXCastSenderVideoQualityOrigin = 2,              // 原画
 };
 
 @interface WXCastSenderVideoOptions : NSObject

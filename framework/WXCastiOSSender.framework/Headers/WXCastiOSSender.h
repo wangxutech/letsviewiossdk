@@ -95,7 +95,7 @@ typedef NS_ENUM(NSInteger,  WXCastiOSSenderError) {
 /// @return 0=发送投屏消息失败 1=发送投屏消息成功 2=直连广播发起成功 -1=请先配置录屏参数 -2=请先开启录屏
 - (int)mirrorToDeivce:(NSString * _Nonnull)host;
 
-/// 投屏到设备
+/// 投屏到设备 | 旧协议
 /// 需要先开启录屏 -openBroadcast ，之后再调用！
 /// @param msg 携带自定义消息
 - (int)mirrorToDeivce:(NSString * _Nonnull)host withCustomMsg:(NSString *_Nonnull)msg;
@@ -172,5 +172,8 @@ typedef NS_ENUM(NSInteger,  WXCastiOSSenderError) {
 /// 回调-投屏码投屏连接成功
 /// 此时已经通信完毕，12及以上设备内部会自动开启录屏应用，旧系统需要手动调用录屏
 - (void)wxCastiOSSenderOnCastLink:(WXMirrorDevice *_Nonnull)device;
+
+
+- (void)wxCastiOSSenderOn:(WXMirrorDevice *_Nonnull)device changeQuality:(int)quality;
 
 @end

@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)wxCastSoftVideoOutput:(CMSampleBufferRef)buffer;
 
+- (void)wxCastSoftVideoSizeChange:(CGSize)size;
+
 @end
 
 @interface WXCastSoftVideoDecoder : NSObject

@@ -9,7 +9,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WXMirrorDevice : NSObject <NSCoding>
+@interface WXMirrorDevice : NSObject <NSCoding, NSSecureCoding>
+
 /// 设备名称
 @property (nonatomic, copy) NSString *name;
 
@@ -28,16 +29,24 @@ NS_ASSUME_NONNULL_BEGIN
 /// 设备端口号
 @property (nonatomic, assign) NSInteger port;
 
+/// 投屏端口号
+@property (nonatomic, assign) NSInteger mirrorPort;
+
 /// 软件版本号
 @property (nonatomic, assign) NSInteger version;
 
-/// 设备特殊编码
+@property (nonatomic, assign) int width;
+@property (nonatomic, assign) int height;
+
+
+
+
 @property (nonatomic, copy) NSString *serverDate;
 
 @property (nonatomic, copy) NSString *mark;
 
-@property (nonatomic, assign) int width;
-@property (nonatomic, assign) int height;
+@property (nonatomic, assign) NSInteger features;
+
 @end
 
 NS_ASSUME_NONNULL_END

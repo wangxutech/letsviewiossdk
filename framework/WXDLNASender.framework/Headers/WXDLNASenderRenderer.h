@@ -46,6 +46,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) id<WXDLNASenderResponseDelegate>delegate;
 
+/// 通信超时响应时间
+/// 默认为3s
+@property (nonatomic, assign) int timeoutInterval;
+
 /// 初始化
 /// @param device 搜索得到的WXDLNASenderDevice
 - (instancetype)initWithUPnPDevice:(WXDLNASenderDevice *_Nonnull)device;

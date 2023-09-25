@@ -38,10 +38,13 @@ NS_ASSUME_NONNULL_BEGIN
 /// 服务运行状态
 @property (nonatomic, assign) BOOL isRunning;
 
-/// 超时响应时间
+/// 通信超时响应时间
 /// 默认为3s
 @property (nonatomic, assign) int timeoutInterval;
 
+/// 校验接收端设备是否在线间隔
+/// 默认为5s
+@property (nonatomic, assign) int deviceCheckInterval;
 
 + (instancetype _Nonnull)shared;
 
