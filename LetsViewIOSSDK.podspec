@@ -10,19 +10,19 @@
 # pod trunk push LetsViewIOSSDK.podspec --allow-warnings --skip-import-validation --verbose
 
 Pod::Spec.new do |s|
-
+  
   s.name         = "LetsViewIOSSDK"
-  s.version      = "1.2.0"
+  s.version      = "1.3.0"
   s.summary      = "A short description of LetsViewIOSSDK."
-
+  
   s.description  = "LetsviewSDK"
-
+  
   s.homepage     = "https://letsview.com/sdk"
-
+  
   s.license      = { :type => "Copyright", :text => "Copyright ©2023 Wangxutech.com. All rights reserved.\n"}
-
+  
   s.author      = { "wangxutech" => "moblie@wangxutech.com" }
-
+  
   s.source       = { :git => "https://github.com/wangxutech/letsviewiossdk.git", :tag => s.version.to_s }
   
   s.platform = :ios
@@ -33,8 +33,9 @@ Pod::Spec.new do |s|
   
   s.subspec "Core" do |ss|
     ss.vendored_frameworks = [
-        'framework/WXMirrorCore.framework',
+    'framework/WXMirrorCore.framework',
     ]
+    ss.dependency 'SocketRocket'
     ss.ios.pod_target_xcconfig = {
       'VALID_ARCHS[sdk=iphonesimulator*]' => ''
     }
@@ -42,7 +43,7 @@ Pod::Spec.new do |s|
   
   s.subspec "DLNA" do |ss|
     ss.vendored_frameworks = [
-        'framework/WXDLNASender.framework',
+    'framework/WXDLNASender.framework',
     ]
     ss.dependency 'LetsViewIOSSDK/Core'
     ss.libraries = 'xml2'
@@ -53,7 +54,7 @@ Pod::Spec.new do |s|
   
   s.subspec "Airplay" do |ss|
     ss.vendored_frameworks = [
-        'framework/WXAirplaySender.framework',
+    'framework/WXAirplaySender.framework',
     ]
     ss.dependency 'LetsViewIOSSDK/Core'
     ss.ios.pod_target_xcconfig = {
@@ -63,7 +64,7 @@ Pod::Spec.new do |s|
   
   s.subspec "Sender" do |ss|
     ss.vendored_frameworks = [
-        'framework/WXCastiOSSender.framework',
+    'framework/WXCastiOSSender.framework',
     ]
     ss.dependency 'MMWormhole'
     ss.dependency 'LetsViewIOSSDK/Core'
@@ -74,8 +75,8 @@ Pod::Spec.new do |s|
   
   s.subspec "Receiver" do |ss|
     ss.vendored_frameworks = [
-        'framework/WXCastiOSReceiver.framework',
-        'framework/WXCastFFMpeg.framework',
+    'framework/WXCastiOSReceiver.framework',
+    'framework/WXCastFFMpeg.framework',
     ]
     ss.dependency 'LetsViewIOSSDK/Core'
     ss.ios.pod_target_xcconfig = {
